@@ -4,8 +4,9 @@ import org.springframework.boot.SpringApplication;
 
 public class TestOkrepairApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.from(OkrepairApplication::main).with(TestcontainersConfiguration.class).run(args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.from(OkrepairApplication::main).with(TestcontainersConfiguration.class)
+                .run(args);
+    }
 
 }
