@@ -1,14 +1,16 @@
 package com.okrepair.service.impl;
 
+import com.okrepair.dto.device.DeviceBasicDto;
+import com.okrepair.dto.device.DeviceDetailsDto;
 import com.okrepair.dto.device.DeviceRequestDto;
-import com.okrepair.dto.device.DeviceResponseDto;
 import com.okrepair.mapper.DeviceMapper;
 import com.okrepair.model.Device;
 import com.okrepair.repository.DeviceRepository;
 import com.okrepair.service.DeviceService;
 import jakarta.persistence.EntityNotFoundException;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,32 +20,31 @@ public class DeviceServiceImpl implements DeviceService {
     private final DeviceMapper deviceMapper;
 
     @Override
-    public List<DeviceResponseDto> findAll() {
-        return deviceRepository.findAll().stream()
-                .map(deviceMapper::toDto)
-                .toList();
+    public Page<DeviceBasicDto> findAll(Pageable pageable) {
+        return deviceRepository.findAll(pageable)
+                .map(deviceMapper::toBasicDto);
     }
 
     @Override
-    public DeviceResponseDto findById(Long id) {
+    public DeviceDetailsDto findById(Long id) {
         Device device = deviceRepository.findById(id).orElseThrow(() ->
                 new EntityNotFoundException("No device found by id " + id));
-        return deviceMapper.toDto(device);
+        return deviceMapper.toDetailsDto(device);
     }
 
     @Override
-    public DeviceResponseDto create(DeviceRequestDto dto) {
+    public DeviceBasicDto create(DeviceRequestDto dto) {
         Device savedDevice = deviceRepository.save(deviceMapper.toModel(dto));
-        return deviceMapper.toDto(savedDevice);
+        return deviceMapper.toBasicDto(savedDevice);
     }
 
     @Override
-    public DeviceResponseDto update(Long id, DeviceRequestDto dto) {
+    public DeviceBasicDto update(Long id, DeviceRequestDto dto) {
         Device device = deviceRepository.findById(id).orElseThrow(() ->
                 new EntityNotFoundException("No device found by id " + id));
         deviceMapper.updateDeviceFromDto(device, dto);
         Device updatedDevice = deviceRepository.save(device);
-        return deviceMapper.toDto(updatedDevice);
+        return deviceMapper.toBasicDto(updatedDevice);
     }
 
     @Override
