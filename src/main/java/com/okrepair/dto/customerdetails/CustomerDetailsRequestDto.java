@@ -1,7 +1,6 @@
 package com.okrepair.dto.customerdetails;
 
-public record CustomerDetailsResponseDto(
-        Long id,
+public record CustomerDetailsRequestDto(
         String name,
         String lastName,
         String email,

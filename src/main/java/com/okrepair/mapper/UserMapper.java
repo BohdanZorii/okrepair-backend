@@ -7,17 +7,21 @@ import com.okrepair.dto.user.UserResponseDto;
 import com.okrepair.model.Device;
 import com.okrepair.model.User;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.Named;
 
-@Mapper(config = MapperConfig.class)
+@Mapper(config = MapperConfig.class, uses = CustomerDetailsMapper.class)
 public interface UserMapper {
     User toModel(CustomerRegistrationDto dto);
 
-    @Mapping(target = "phoneNumber", source = "customerDetails.phoneNumber")
-    @Mapping(target = "firstName", source = "customerDetails.firstName")
-    @Mapping(target = "lastName", source = "customerDetails.lastName")
     UserResponseDto toDto(User user);
 
     void updateDeviceFromDto(@MappingTarget Device device, DeviceRequestDto dto);
+
+    @Named("userById")
+    default User getUserById(Long id) {
+        User user = new User();
+        user.setId(id);
+        return user;
+    }
 }

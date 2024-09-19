@@ -1,12 +1,12 @@
 package com.okrepair.service;
 
-import com.okrepair.dto.customerdetails.CustomerDetailsDto;
+import com.okrepair.dto.customerdetails.CustomerDetailsRequestDto;
 import com.okrepair.dto.customerdetails.CustomerDetailsResponseDto;
 
 public interface CustomerDetailsService {
-    CustomerDetailsResponseDto create(CustomerDetailsDto customerDetailsDto);
+    CustomerDetailsResponseDto create(CustomerDetailsRequestDto customerDetailsDto);
 
-    CustomerDetailsResponseDto update(Long customerId, CustomerDetailsDto customerDetailsDto);
+    CustomerDetailsResponseDto update(Long id, CustomerDetailsRequestDto customerDetailsDto);
 
     //CustomerDetailsResponseDto getById(Long customerId);
 

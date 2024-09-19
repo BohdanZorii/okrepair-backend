@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.toModel(customerRegistrationDto);
         user.setPassword(passwordEncoder.encode(customerRegistrationDto.password()));
         CustomerDetails customerDetails = customerDetailsRepository.findByEmail(email)
-                .orElse(customerDetailsMapper.toModel(customerRegistrationDto));
+                .orElse(customerDetailsMapper.toModel(customerRegistrationDto.customerDetails()));
         user.setCustomerDetails(customerDetails);
         user.getRoles().add(roleRepository.getByRole(ROLE_USER));
         userRepository.save(user);
