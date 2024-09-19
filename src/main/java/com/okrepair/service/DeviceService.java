@@ -1,17 +1,19 @@
 package com.okrepair.service;
 
+import com.okrepair.dto.device.DeviceBasicDto;
+import com.okrepair.dto.device.DeviceDetailsDto;
 import com.okrepair.dto.device.DeviceRequestDto;
-import com.okrepair.dto.device.DeviceResponseDto;
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface DeviceService {
-    List<DeviceResponseDto> findAll();
+    Page<DeviceBasicDto> findAll(Pageable pageable);
 
-    DeviceResponseDto findById(Long id);
+    DeviceDetailsDto findById(Long id);
 
-    DeviceResponseDto create(DeviceRequestDto dto);
+    DeviceBasicDto create(DeviceRequestDto dto);
 
-    DeviceResponseDto update(Long id, DeviceRequestDto dto);
+    DeviceBasicDto update(Long id, DeviceRequestDto dto);
 
     void deleteById(Long id);
 }

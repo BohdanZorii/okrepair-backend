@@ -1,12 +1,14 @@
 package com.okrepair.controller;
 
+import com.okrepair.dto.device.DeviceBasicDto;
+import com.okrepair.dto.device.DeviceDetailsDto;
 import com.okrepair.dto.device.DeviceRequestDto;
-import com.okrepair.dto.device.DeviceResponseDto;
 import com.okrepair.service.DeviceService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,22 +27,22 @@ public class DeviceController {
     private final DeviceService deviceService;
 
     @GetMapping
-    public List<DeviceResponseDto> findAll() {
-        return deviceService.findAll();
+    public Page<DeviceBasicDto> findAll(Pageable pageable) {
+        return deviceService.findAll(pageable);
     }
 
     @GetMapping("/{id}")
-    public DeviceResponseDto findById(@PathVariable @Positive Long id) {
+    public DeviceDetailsDto findById(@PathVariable @Positive Long id) {
         return deviceService.findById(id);
     }
 
     @PostMapping
-    public DeviceResponseDto create(@RequestBody @Valid DeviceRequestDto requestDto) {
+    public DeviceBasicDto create(@RequestBody @Valid DeviceRequestDto requestDto) {
         return deviceService.create(requestDto);
     }
 
     @PutMapping("/{id}")
-    public DeviceResponseDto update(@PathVariable @Positive Long id,
+    public DeviceBasicDto update(@PathVariable @Positive Long id,
                                     @RequestBody @Valid DeviceRequestDto requestDto) {
         return deviceService.update(id, requestDto);
     }

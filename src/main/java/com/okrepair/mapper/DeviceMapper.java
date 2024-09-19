@@ -1,8 +1,9 @@
 package com.okrepair.mapper;
 
 import com.okrepair.config.MapperConfig;
+import com.okrepair.dto.device.DeviceBasicDto;
+import com.okrepair.dto.device.DeviceDetailsDto;
 import com.okrepair.dto.device.DeviceRequestDto;
-import com.okrepair.dto.device.DeviceResponseDto;
 import com.okrepair.model.Device;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
@@ -11,7 +12,9 @@ import org.mapstruct.MappingTarget;
 public interface DeviceMapper {
     Device toModel(DeviceRequestDto dto);
 
-    DeviceResponseDto toDto(Device device);
+    DeviceBasicDto toBasicDto(Device device);
+
+    DeviceDetailsDto toDetailsDto(Device device);
 
     void updateDeviceFromDto(@MappingTarget Device device, DeviceRequestDto dto);
 }
