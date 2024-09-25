@@ -2,20 +2,14 @@ package com.okrepair.controller;
 
 import com.okrepair.dto.device.DeviceBasicDto;
 import com.okrepair.dto.device.DeviceDetailsDto;
-import com.okrepair.dto.device.DeviceRequestDto;
 import com.okrepair.service.DeviceService;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,21 +28,5 @@ public class DeviceController {
     @GetMapping("/{id}")
     public DeviceDetailsDto findById(@PathVariable @Positive Long id) {
         return deviceService.findById(id);
-    }
-
-    @PostMapping
-    public DeviceBasicDto create(@RequestBody @Valid DeviceRequestDto requestDto) {
-        return deviceService.create(requestDto);
-    }
-
-    @PutMapping("/{id}")
-    public DeviceBasicDto update(@PathVariable @Positive Long id,
-                                    @RequestBody @Valid DeviceRequestDto requestDto) {
-        return deviceService.update(id, requestDto);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable @Positive Long id) {
-        deviceService.deleteById(id);
     }
 }
