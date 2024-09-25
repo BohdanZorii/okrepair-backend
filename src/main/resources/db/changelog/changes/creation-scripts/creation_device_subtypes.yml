@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-device-subtypes-table
+      author: bohdan_zorii
+      changes:
+        - createTable:
+            tableName: device_subtypes
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: device_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: image_url
+                  type: varchar(255)
+        - addForeignKeyConstraint:
+            constraintName: fk_device_subtype_device  # Ім'я обмеження
+            baseTableName: device_subtypes
+            baseColumnNames: device_id
+            referencedTableName: devices
+            referencedColumnNames: id
