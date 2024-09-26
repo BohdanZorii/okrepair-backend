@@ -1,6 +1,6 @@
 package com.okrepair.controller;
 
-import com.okrepair.dto.textus.EmailRequestDto;
+import com.okrepair.dto.emailrequest.EmailRequestDto;
 import com.okrepair.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
