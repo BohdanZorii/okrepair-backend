@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_zip_codes_table
+      author: bohdan_zorii
+      changes:
+        - createTable:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  type: varchar(20)
+                  constraints:
+                    primaryKey: true
+                    nullable: false

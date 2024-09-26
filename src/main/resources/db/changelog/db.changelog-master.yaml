@@ -4,6 +4,10 @@ databaseChangeLog:
   - include:
       file: db/changelog/changes/insertion-scripts/insertion-devices.yml
   - include:
-      file: db/changelog/changes/creation-scripts/creation_device_subtypes.yml
+      file: db/changelog/changes/creation-scripts/creation-device_subtypes.yml
+  - include:
+      file: db/changelog/changes/creation-scripts/creation-zipcodes.yml
+  - include:
+      file: db/changelog/changes/insertion-scripts/insertion-zipcodes.yml
 
 

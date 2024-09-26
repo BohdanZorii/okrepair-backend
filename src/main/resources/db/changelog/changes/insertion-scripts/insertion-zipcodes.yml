@@ -1,0 +1,287 @@
+databaseChangeLog:
+  - changeSet:
+      id: "insertion-zipcodes"
+      author: "bohdanzorii"
+      changes:
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "3003"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "3004"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "3005"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "3009"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30010"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30022"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30060"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30061"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30062"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30063"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30064"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30065"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30066"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30067"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30068"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30071"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30075"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30076"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30077"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30080"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30081"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30082"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30090"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30091"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30092"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30096"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30097"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30319"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30324"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30327"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30328"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30329"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30338"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30339"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30340"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30341"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30342"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30345"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30346"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30350"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30356"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30360"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30362"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "30366"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "31146"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "31156"
+        - insert:
+            tableName: zip_codes
+            columns:
+              - column:
+                  name: code
+                  value: "39901"
