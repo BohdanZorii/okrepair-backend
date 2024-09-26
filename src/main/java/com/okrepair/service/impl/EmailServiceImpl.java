@@ -1,6 +1,6 @@
 package com.okrepair.service.impl;
 
-import com.okrepair.dto.textus.EmailRequestDto;
+import com.okrepair.dto.emailrequest.EmailRequestDto;
 import com.okrepair.service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
