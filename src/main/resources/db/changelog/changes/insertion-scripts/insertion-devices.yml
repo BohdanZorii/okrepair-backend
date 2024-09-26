@@ -11,7 +11,7 @@ databaseChangeLog:
                   value: "Refrigerator"
               - column:
                   name: image_url
-                  value: "/images/brands/refrigerator.jpg"
+                  value: "/images/devices/refrigerator.png"
               - column:
                   name: description
                   value: "Refrigerator is an essential part of every household to keep edibles fresh and fit. You might get panicked when your kitchen affairs are disrupted by a broken fridge. However, there’s nothing to worry about when fast and reliable repair services are just a phone call away. Maple leaf repair services have well trained technicians alongwith high quality, state of the art tools to assist you with every refrigerator-related issue."
@@ -24,7 +24,7 @@ databaseChangeLog:
                   value: "Cooktop"
               - column:
                   name: image_url
-                  value: "/images/brands/cooktop.jpg"
+                  value: "/images/devices/cooktop.png"
               - column:
                   name: description
                   value: "Cooktop is one of the most useful inventions of all times. To keep your cooking related matters well organized and in a seamless flow, make sure your cooktop is functional. However, there’s nothing to worry about when fast and reliable repair services are just a phone call away. Maple leaf repair services have well trained technicians alongwith high quality, state of the art tools to assist you with every oven-related issue."
@@ -37,7 +37,7 @@ databaseChangeLog:
                   value: "Washer"
               - column:
                   name: image_url
-                  value: "/images/brands/washer.jpg"
+                  value: "/images/devices/washer.png"
               - column:
                   name: description
                   value: "Life without a fully functional washer can be a nightmare. They are an essential part of every household to ensure that the flow of laundry-related matters is smooth and seamless. You should keep calm in such situations. However, there’s nothing to worry about when fast and reliable repair services are just a phone call away. Maple leaf repair services have well trained technicians alongwith high quality, state of the art tools to assist you with every washer-related issue."
@@ -50,7 +50,7 @@ databaseChangeLog:
                   value: "Dryer"
               - column:
                   name: image_url
-                  value: "/images/brands/dryer.jpg"
+                  value: "/images/devices/dryer.png"
               - column:
                   name: description
                   value: "Dryers are no longer considered a luxury in modern households. They are an essential. However, there’s nothing to worry about when fast and reliable repair services are just a phone call away. Maple leaf repair services have well trained technicians alongwith high quality, state of the art tools to assist you with every dryer-related issue."
@@ -63,7 +63,20 @@ databaseChangeLog:
                   value: "Ice Maker"
               - column:
                   name: image_url
-                  value: "/images/brands/ice_maker.jpg"
+                  value: "/images/devices/ice_maker.png"
               - column:
                   name: description
                   value: "Our expert technicians provide top-notch ice maker repair, ensuring your machine runs smoothly and efficiently. From quick fixes to complex repairs, we’ll have your ice maker producing ice like new in no time."
+
+        - insert:
+            tableName: devices
+            columns:
+              - column:
+                  name: name
+                  value: "Range"
+              - column:
+                  name: image_url
+                  value: "/images/devices/range.png"
+              - column:
+                  name: description
+                  value: "Cooktop is one of the most useful inventions of all times. To keep your cooking related matters well organized and in a seamless flow, make sure your cooktop is functional. However, there’s nothing to worry about when fast and reliable repair services are just a phone call away. Maple leaf repair services have well trained technicians alongwith high quality, state of the art tools to assist you with every oven-related issue."
