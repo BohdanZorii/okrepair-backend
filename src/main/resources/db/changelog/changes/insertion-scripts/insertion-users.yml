@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-admin-user
+      author: bohdan_zorii
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: '1'
+              - column:
+                  name: email
+                  value: admin@example.com
+              - column:
+                  name: password
+                  value: admin_h4shed_password
+        - insert:
+            tableName: users_roles
+            columns:
+              - column:
+                  name: user_id
+                  value: '1'
+              - column:
+                  name: role_id
+                  value: '1'

@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: "insertion-zipcodes"
-      author: "bohdanzorii"
+      id: "insert-zipcodes"
+      author: "bohdan_zorii"
       changes:
         - insert:
             tableName: zip_codes

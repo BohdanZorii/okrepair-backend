@@ -9,5 +9,15 @@ databaseChangeLog:
       file: db/changelog/changes/creation-scripts/creation-zipcodes.yml
   - include:
       file: db/changelog/changes/insertion-scripts/insertion-zipcodes.yml
+  - include:
+      file: db/changelog/changes/creation-scripts/creation-roles.yml
+  - include:
+      file: db/changelog/changes/insertion-scripts/insertion-roles.yml
+  - include:
+      file: db/changelog/changes/creation-scripts/creation-customer_details.yml
+  - include:
+      file: db/changelog/changes/creation-scripts/creation-users.yml
+  - include:
+      file: db/changelog/changes/insertion-scripts/insertion-users.yml
 
 
